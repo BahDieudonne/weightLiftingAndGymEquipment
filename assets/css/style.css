@@ -1265,3 +1265,60 @@ h3 > a { color: inherit; }
   .footer-bottom .container { justify-content: space-between; }
 
 }
+/* ====== Responsiveness ===== */
+@media (max-width: 360px) {
+  .container {
+    padding-inline: 10px;
+  }
+
+  .h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding-inline: 30px;
+    font-size: var(--fs-9);
+  }
+
+  .hero-title {
+    font-size: var(--fs-2);
+    max-width: 90%;
+  }
+
+  .footer-text {
+    font-size: var(--fs-10);
+  }
+}
+@media (max-width: 480px) {
+  .input-field,
+  .newsletter-card .input-field {
+    padding: 15px;
+    font-size: var(--fs-9);
+  }
+
+  .newsletter-card .btn {
+    width: 100%;
+    padding-inline: 20px;
+    font-size: var(--fs-9);
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+}
