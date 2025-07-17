@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - GymShop</title>
+  <link rel="stylesheet" href="/assets/css/shop1.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!--- #HEADER-->
+  <header class="header" data-header>
+    <div class="container">
+      <div class="overlay" data-overlay></div>
+      <a href="#" class="logo">
+        <img src="/assets/images/logo.png" alt="WeightLifting logo" style="height: 40px;">
+      </a>
+      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="index.html" class="logo">
+            <img src="./assets/images/logo.svg" alt=" logo" width="130" height="31">
+          </a>
+          <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+        <ul class="navbar-list">
+          <li>
+            <a href="/index.html" class="navbar-link">Home</a>
+          </li>
+          <li>
+            <a href="shop1.html" class="navbar-link">Shop</a>
+          </li>
+          <li>
+            <a href="about.html" class="navbar-link">About</a>
+          </li>
+          <li>
+            <a href="contact.html" class="navbar-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="shop1.html" class="active">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="cart-icon" id="view-cart-btn">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================ Shop Section =============== -->
+  <main class="shop-container">
+    <!-- ===== SideBar ===== -->
+    <aside class="sidebar">
+      <h3>Categories</h3>
+      <ul class="categories-list">
+        <li data-category="all" class="active">All Products</li>
+        <li data-category="belts">Weightlifting Belts</li>
+        <li data-category="equipment">Gym Equipment</li>
+      </ul>
+
+      <h3>Price Range</h3>
+      <div class="price-filter">
+        <input type="range" id="price-range" min="0" max="500" value="500">
+        <p>Max Price: $<span id="max-price-display">500</span></p>
+      </div>
+
+      <h3>Sort By</h3>
+      <select id="sort-by">
+        <option value="default">Default</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="name-asc">Name: A-Z</option>
+        <option value="name-desc">Name: Z-A</option>
+      </select>
+    </aside>
+
+    <!-- =============== Products =============== -->
+    <section class="products-grid">
+
+      <!-- 
+        =========================== Belts ========================== 
+      -->
+      <!-- =============== Product 1 =============== -->
+      <div class="product-card" data-id="1" data-image-src="/assets/images/LeatherWeightliftingBelt.jpg" data-category="belts" data-name="Leather Weightlifting Belt" data-price="59.99">
+        <img src="/assets/images/LeatherWeightliftingBelt.jpg" alt="Leather Weightlifting Belt">
+        <h4>Leather Weightlifting Belt</h4>
+        <p>$59.99</p>
+        <button class="add-to-cart-btn" data-id="1">Add to Cart</button>
+      </div>
+      <!-- =============== Product 2 =============== -->
+      <div class="product-card" data-id="2" data-image-src="/assets/images/NylonSupport.jpg" data-category="belts" data-name="Nylon Support Belt" data-price="34.50">
+        <img src="/assets/images/NylonSupport.jpg" alt="Nylon Support Belt">
+        <h4>Nylon Support Belt</h4>
+        <p>$34.50</p>
+        <button class="add-to-cart-btn" data-id="2">Add to Cart</button>
+      </div>
+      <!-- =============== Product 3 =============== -->
+      <div class="product-card" data-id="3" data-image-src="/assets/images/QuickRelease.jpg" data-category="belts" data-name="Quick Release Belt" data-price="75.00">
+        <img src="/assets/images/QuickRelease.jpg" alt="Quick Release Belt">
+        <h4>Quick Release Belt</h4>
+        <p>$75.00</p>
+        <button class="add-to-cart-btn" data-id="3">Add to Cart</button>
+      </div>
+
+      <!-- 
+        =========================== Equipments ========================== 
+      -->
+      <!-- =============== Product 4 =============== -->
+      <div class="product-card" data-id="4" data-image-src="/assets/images/AdjustableDumbbell.jpeg" data-category="equipment" data-name="Adjustable Dumbbell Set" data-price="249.99">
+        <img src="/assets/images/AdjustableDumbbell.jpeg" alt="Adjustable Dumbbell Set">
+        <h4>Adjustable Dumbbell Set</h4>
+        <p>$249.99</p>
+        <button class="add-to-cart-btn" data-id="4">Add to Cart</button>
+      </div>
+      <!-- =============== Product 5 =============== -->
+      <div class="product-card" data-id="5" data-image-src="/assets/images/CastIronKettlebell.jpeg" data-category="equipment" data-name="Cast Iron Kettlebell (24kg)" data-price="89.00">
+        <img src="/assets/images/CastIronKettlebell.jpeg" alt="Cast Iron Kettlebell">
+        <h4>Cast Iron Kettlebell (24kg)</h4>
+        <p>$89.00</p>
+        <button class="add-to-cart-btn" data-id="5">Add to Cart</button>
+      </div>
+      <!-- =============== Product 6 =============== -->
+      <div class="product-card" data-id="6" data-image-src="/assets/images/ResistanceBand.jpeg" data-category="equipment" data-name="Resistance Band Set" data-price="29.99">
+        <img src="/assets/images/ResistanceBand.jpeg" alt="Resistance Band Set">
+        <h4>Resistance Band Set</h4>
+        <p>$29.99</p>
+        <button class="add-to-cart-btn" data-id="6">Add to Cart</button>
+      </div>
+      <!-- =============== Product 7 =============== -->
+      <div class="product-card" data-id="7" data-image-src="/assets/images/AdjustableWeightBench.jpeg" data-category="equipment" data-name="Adjustable Weight Bench" data-price="189.99">
+        <img src="/assets/images/AdjustableWeightBench.jpeg" alt="Adjustable Weight Bench">
+        <h4>Adjustable Weight Bench</h4>
+        <p>$189.99</p>
+        <button class="add-to-cart-btn" data-id="7">Add to Cart</button>
+      </div>
+      <!-- =============== Product 8 =============== -->
+      <div class="product-card" data-id="8" data-image-src="/assets/images/DoorwayPull-up.jpeg" data-category="equipment" data-name="Doorway Pull-up Bar" data-price="45.00">
+        <img src="/assets/images/DoorwayPull-up.jpeg" alt="Doorway Pull-up Bar">
+        <h4>Doorway Pull-up Bar</h4>
+        <p>$45.00</p>
+        <button class="add-to-cart-btn" data-id="8">Add to Cart</button>
+      </div>
+      <!-- =============== Product 9 =============== -->
+      <div class="product-card" data-id="9" data-image-src="/assets/images/GymGloveswithWristSupport.jpeg" data-category="equipment" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/GymGloveswithWristSupport.jpeg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="9">Add to Cart</button>
+      </div>
+
+      <!-- 
+        =========================== Belts ========================== 
+      -->
+      <!-- =============== Product 10 =============== -->
+      <div class="product-card" data-id="10" data-image-src="/assets/images/mainn.jpg" data-category="belts" data-name="RDX PowerLifting Leather Belt" data-price="19.99">
+        <img src="/assets/images/mainn.jpg" alt="RDX PowerLifting Leather Belt">
+        <h4>RDX PowerLifting Leather Belt</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="10">Add to Cart</button>
+      </div>
+      <!-- =============== Product 11 =============== -->
+      <div class="product-card" data-id="11" data-image-src="/assets/images/main1.jpg" data-category="belts" data-name="Gym Double-prong Belt" data-price="19.99">
+        <img src="/assets/images/main1.jpg" alt="Double-prong Belt">
+        <h4>Double-prong Belt</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="11">Add to Cart</button>
+      </div>
+      <!-- =============== Product 12 =============== -->
+      <div class="product-card" data-id="12" data-image-src="/assets/images/1.jpg" data-category="belts" data-name="Gym Lever Lifting Belt" data-price="19.99">
+        <img src="/assets/images/1.jpg" alt="Lever Lifting Belt">
+        <h4>Lever Lifting Belt</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="12">Add to Cart</button>
+      </div>
+      <!-- =============== Product 13 =============== -->
+      <div class="product-card" data-id="13" data-image-src="/assets/images/Velcro.jpg" data-category="belts" data-name="Gym Velcro Belt" data-price="19.99">
+        <img src="/assets/images/Velcro.jpg" alt="Velcro Belt">
+        <h4>Velcro Belt</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="13">Add to Cart</button>
+      </div>
+      <!-- =============== Product 14 =============== -->
+      <div class="product-card" data-id="14" data-image-src="/assets/images/10.jpg" data-category="belts" data-name="Weightlifting belt" data-price="19.99">
+        <img src="/assets/images/10.jpg" alt="Weightlifting belt">
+        <h4>Weightlifting belt</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="14">Add to Cart</button>
+      </div>
+      <!-- =============== Product 15 =============== -->
+      <div class="product-card" data-id="15" data-image-src="/assets/images/11.jpg" data-category="belts" data-name="Gym Double-prong Belt" data-price="19.99">
+        <img src="/assets/images/11.jpg" alt="Gym Double-prong Belt">
+        <h4>Double-prong Belt</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="15">Add to Cart</button>
+      </div>
+      <!-- =============== Product 16 =============== -->
+      <div class="product-card" data-id="16" data-image-src="/assets/images/0.jpg" data-category="belts" data-name="Gym Leather Belt" data-price="19.99">
+        <img src="/assets/images/0.jpg"alt="Gym Leather Belt">
+        <h4>Gym Leather Belt</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="16">Add to Cart</button>
+      </div>
+      <!-- =============== Product 17 =============== -->
+      <div class="product-card" data-id="17" data-image-src="/assets/images/Double.jpg" data-category="belts" data-name="Gym Double-prong Belt" data-price="19.99">
+        <img src="/assets/images/Double.jpg" alt="Gym Double-prong Belt">
+        <h4>Double-prong Belt</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="17">Add to Cart</button>
+      </div>
+      <!-- =============== Product 18 =============== -->
+      <div class="product-card" data-id="19" data-image-src="/assets/images/Belt7.jpeg" data-category="belts" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/Belt7.jpeg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="19">Add to Cart</button>
+      </div>
+      <!-- =============== Product 19 =============== -->
+      <div class="product-card" data-id="19" data-image-src="/assets/images/Belt1.jpeg" data-category="belts" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/Belt1.jpeg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="19">Add to Cart</button>
+      </div>
+      <!-- =============== Product 20 =============== -->
+      <div class="product-card" data-id="20" data-image-src="/assets/images/Belt2.jpeg" data-category="belts" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/Belt2.jpeg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="20">Add to Cart</button>
+      </div>
+      <!-- =============== Product 21 =============== -->
+      <div class="product-card" data-id="21" data-image-src="/assets/images/Belt3.jpeg" data-category="belts" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/Belt3.jpeg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="21">Add to Cart</button>
+      </div>
+      <!-- =============== Product 22 =============== -->
+      <div class="product-card" data-id="22" data-image-src="/assets/images/Belt4.jpeg" data-category="belts" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/Belt4.jpeg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="22">Add to Cart</button>
+      </div>
+      <!-- =============== Product 23 =============== -->
+      <div class="product-card" data-id="23" data-image-src="/assets/images/Belt5.jpeg" data-category="belts" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/Belt5.jpeg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="23">Add to Cart</button>
+      </div>
+      <!-- =============== Product 24 =============== -->
+      <div class="product-card" data-id="24" data-image-src="/assets/images/Belt6.jpeg" data-category="belts" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/Belt6.jpeg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="24">Add to Cart</button>
+      </div>
+
+      <!-- 
+        =========================== Equipments ========================== 
+      -->
+      <!-- =============== Product 25 =============== -->
+      <div class="product-card" data-id="25" data-image-src="/assets/images/12.jpg" data-category="equipment" data-name="Gym Wrist Straps" data-price="19.99">
+        <img src="/assets/images/12.jpg" alt="Gym Wrist Straps">
+        <h4>Wrist Straps</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="25">Add to Cart</button>
+      </div>
+      <!-- =============== Product 26 =============== -->
+      <div class="product-card" data-id="26" data-image-src="/assets/images/Gloves.jpg" data-category="equipment" data-name="Gym Trideer Workout Gloves" data-price="19.99">
+        <img src="/assets/images/Gloves.jpg" alt="Trideer Workout Gloves">
+        <h4>Gym Trideer Workout Gloves</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="26">Add to Cart</button>
+      </div>
+      <!-- =============== Product 27 =============== -->
+      <div class="product-card" data-id="27" data-image-src="/assets/images/Equipment1.jpeg" data-category="equipment" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/Equipment1.jpeg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="27">Add to Cart</button>
+      </div>
+      <!-- =============== Product 28 =============== -->
+      <div class="product-card" data-id="28" data-image-src="/assets/images/Equipment2.jpg" data-category="equipment" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/Equipment2.jpg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="28">Add to Cart</button>
+      </div>
+      <!-- =============== Product 29 =============== -->
+      <div class="product-card" data-id="29" data-image-src="/assets/images/Equipment3.jpg" data-category="equipment" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/Equipment3.jpg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="29">Add to Cart</button>
+      </div>
+      <!-- =============== Product 30 =============== -->
+      <div class="product-card" data-id="30" data-image-src="/assets/images/Equipment4.jpg" data-category="equipment" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/Equipment4.jpg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="30">Add to Cart</button>
+      </div>
+      <!-- =============== Product 31 =============== -->
+      <div class="product-card" data-id="30" data-image-src="/assets/images/Equipment5.jpg" data-category="equipment" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/Equipment5.jpg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="30">Add to Cart</button>
+      </div>
+      <!-- =============== Product 32 =============== -->
+      <div class="product-card" data-id="30" data-image-src="/assets/images/Equipment6.jpg" data-category="equipment" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/Equipment6.jpg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="30">Add to Cart</button>
+      </div>
+      <!-- =============== Product 33 =============== -->
+      <div class="product-card" data-id="30" data-image-src="/assets/images/Equipment6.jpg" data-category="equipment" data-name="Gym Gloves with Wrist Support" data-price="19.99">
+        <img src="/assets/images/Equipment6.jpg" alt="Gym Gloves">
+        <h4>Gym Gloves with Wrist Support</h4>
+        <p>$19.99</p>
+        <button class="add-to-cart-btn" data-id="30">Add to Cart</button>
+      </div>
+    </section>
+
+    <!-- =============== Cart Section =============== -->
+    <div class="cart-sidebar" id="cart-sidebar">
+      <button class="close-cart-btn" id="close-cart-btn"><i class="fas fa-times"></i></button>
+      <h2>Your Cart</h2>
+      <div class="cart-items" id="cart-items-container">
+        <p class="empty-cart-message">Your cart is empty.</p>
+      </div>
+      <div class="cart-summary">
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button class="contact-checkout-button" id="contact-checkout-button">Proceed to Contact</button>
+      </div>
+    </div>
+
+    <!-- =============== Contact Section =============== -->
+    <section class="contact-inquiry-section" id="contact-inquiry-section">
+      <button class="back-to-shop-btn" id="back-to-shop-btn"><i class="fas fa-arrow-left"></i> Back to Shop</button>
+      <h2>Inquire About Your Order</h2>
+      <p>Please fill in your details and we'll get back to you regarding the selected products.</p>
+
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="6217928d-c83f-4141-b291-08c70fe980db">
+        <div class="form-group">
+          <label for="contactName">Your Name</label>
+          <input type="text" id="contactName" name="contactName" required>
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Your Email</label>
+          <input type="email" id="contactEmail" name="contactEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="contactNumber">Your Phone Number: </label>
+          <input type="number" id="contactNumber" name="contactNumber" required>
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">Inquiry Details (auto-filled)</label>
+          <textarea id="contactMessage" name="contactMessage" rows="10" readonly></textarea>
+        </div>
+
+        <div class="contact-social-options">
+          <h3>Or Inquire via Chat:</h3>
+          <ul class="social-list">
+            <li>
+              <a href="https://wa.me/237681234567"  target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <!-- <a href="#" class="social-link whatsapp-link" id="whatsapp-link">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a> -->
+            </li>
+            <li>
+              <a href="https://t.me/Steven_austwell" target="_blank">
+                <i class="fab fa-telegram"></i>
+              </a>
+              <!-- <a href="#" class="social-link telegram-link" id="telegram-link">
+                <i class="fab fa-telegram-plane"></i> Telegram
+              </a> -->
+            </li>
+          </ul>
+        </div>
+        <button type="submit" class="send-inquiry-button">Send Inquiry</button>
+      </form>
+      <div id="contact-status-message" class="contact-status-message" style="display: none;"></div>
+
+    </section>
+  </main>
+
+  <!--- #FOOTER -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="/assets/images/logo.png" alt="WeightLifting logo" style="height: 50px;">
+          </a>
+          <p class="footer-text">
+            Level up your workouts with premium weightlifting belts and top-tier gym equipment.
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Information</p>
+          </li>
+          <li>
+            <a href="about.html" class="footer-link">About Company</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Payment Type</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Refund Policy</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Category</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Complete Your Fitness</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Gym Equipments</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">WeightLifting Belts</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Help & Support</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">FAQ Information</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Return Policy</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Shipping & Delivery</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2025 <a href="#">weightLiftingBelt</a>. All Rights Reserved
+        </p>
+
+        <ul class="footer-bottom-list">
+          <li>
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" class="footer-bottom-link">Terms & Conditions</a>
+          </li>
+          <li>
+            <a href="#" class="footer-bottom-link">Sitemap</a>
+          </li>
+        </ul>
+
+        <div class="payment">
+          <p class="payment-title">We Support</p>
+          <img src="/assets/images/payment-img.png" alt="Online payment logos" class="payment-img">
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="/assets/js/shop1.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
