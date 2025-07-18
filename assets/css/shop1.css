@@ -344,41 +344,40 @@ nav {
     margin-bottom: 15px;
 }
 
-.contact-checkout-button { /* Renamed from .checkout-button */
-    background-color: #007bff; /* Blue */
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    width: 100%;
-    transition: background-color 0.3s ease;
+.contact-checkout-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  width: 100%;
+  transition: background-color 0.3s ease;
 }
 
 .contact-checkout-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
-
 
 /* Contact/Inquiry Section */
 .contact-inquiry-section {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Full width of shop-container */
-  /* height: 100%; */
+  width: 100%;
   background-color: #fff;
   padding: 20px;
   box-sizing: border-box;
-  transform: translateX(100%); /* Initially off-screen right */
+  transform: translateX(100%);
   transition: transform 0.3s ease-out;
-  z-index: 100; /* Above product grid */
-  display: flex; /* Use flexbox for content arrangement */
+  z-index: 100;
+  display: flex;
   flex-direction: column;
 }
+
 .contact-inquiry-section.open {
-  transform: translateX(0); /* Slide into view */
+  transform: translateX(0);
 }
 
 .contact-inquiry-section h2 {
@@ -403,7 +402,7 @@ nav {
   cursor: pointer;
   padding: 5px 10px;
   margin-bottom: 20px;
-  align-self: flex-start; /* Align to the start of the flex container */
+  align-self: flex-start;
 }
 
 .back-to-shop-btn:hover {
@@ -444,7 +443,7 @@ nav {
 }
 
 .send-inquiry-button {
-  background-color: #28a745; /* Green */
+  background-color: #28a745;
   color: #fff;
   border: none;
   padding: 15px 25px;
@@ -455,9 +454,6 @@ nav {
   margin-top: 15px;
   transition: background-color 0.3s ease, transform 0.1s ease;
 }
-
-/* ============= Contact Options =================== */
-
 
 .send-inquiry-button:hover {
   background-color: #218838;
@@ -488,21 +484,81 @@ nav {
   color: #721c24;
   border: 1px solid #f5c6cb;
 }
+
+/* Contact social options */
 .contact-social-options {
   text-align: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  h3{
-    font-size: 25px;
+}
+
+.contact-social-options h3 {
+  font-size: 25px;
+}
+
+.contact-social-options ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  padding: 1em;
+  list-style: none;
+}
+
+.contact-social-options ul li a i {
+  font-size: 2em;
+}
+
+/* =================== MEDIA QUERIES =================== */
+
+@media (max-width: 768px) {
+  .contact-inquiry-section h2 {
+    font-size: 1.5em;
   }
-  ul{
-    align-items: center;
-    justify-content: center;
-    padding: 1em 1em;
-    gap: 2em;
-    li a i{
-      font-size: 2em;
-    }
+
+  .contact-checkout-button,
+  .send-inquiry-button {
+    font-size: 1em;
+    padding: 10px 16px;
+  }
+
+  .contact-social-options h3 {
+    font-size: 20px;
+  }
+
+  .contact-social-options ul {
+    gap: 1em;
+    padding: 0.5em;
+  }
+
+  .contact-social-options ul li a i {
+    font-size: 1.5em;
+  }
+
+  #contact-form textarea {
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-inquiry-section {
+    padding: 15px;
+  }
+
+  .contact-checkout-button,
+  .send-inquiry-button {
+    padding: 10px;
+    font-size: 0.95em;
+  }
+
+  .contact-inquiry-section h2 {
+    font-size: 1.3em;
+  }
+
+  .contact-inquiry-section p {
+    font-size: 0.95em;
   }
 }
 
